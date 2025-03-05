@@ -1,0 +1,109 @@
+# curl 127.0.0.1:9110
+#
+#
+#rippled exporter
+# HELP The current Unix timestamp from the node (in seconds).
+# TYPE node_timestamp counter
+node_timestamp 1741163970
+# HELP The index of the last fully validated ledger synced by the rippled server
+# TYPE rippled_ledger_index counter
+rippled_ledger_index 94561532
+# HELP The Unix timestamp of the last synced ledger.
+# TYPE rippled_ledger_index_time counter
+rippled_ledger_index_time 1741163962
+# HELP A status indicator (0 or 1) showing whether the node is catching up with the network.
+# TYPE rippled_catching_up gauge
+rippled_catching_up 0
+# HELP The current number of peers connected to the rippled node.
+# TYPE rippled_peers gauge
+rippled_peers 10
+# HELP rippled clientFeeChange per second.
+# TYPE rippled_clientFeeChange_per_second gauge
+rippled_clientFeeChange_per_second 22
+# HELP rippled clientRPC in progress.
+# TYPE rippled_clientRPC_in_progress gauge
+rippled_clientRPC_in_progress 1
+# HELP rippled untrustedValidation per second.
+# TYPE rippled_untrustedValidation_per_second gauge
+rippled_untrustedValidation_per_second 35
+# HELP rippled untrustedValidation peak time.
+# TYPE rippled_untrustedValidation_peak_time gauge
+rippled_untrustedValidation_peak_time 1
+# HELP rippled transaction per second.
+# TYPE rippled_transaction_per_second gauge
+rippled_transaction_per_second 25
+# HELP rippled batch per second.
+# TYPE rippled_batch_per_second gauge
+rippled_batch_per_second 19
+# HELP rippled batch peak time.
+# TYPE rippled_batch_peak_time gauge
+rippled_batch_peak_time 214
+# HELP rippled ledgerData per second.
+# TYPE rippled_ledgerData_per_second gauge
+rippled_ledgerData_per_second 3
+# HELP rippled ledgerData peak time.
+# TYPE rippled_ledgerData_peak_time gauge
+rippled_ledgerData_peak_time 200
+# HELP rippled ledgerData avg time.
+# TYPE rippled_ledgerData_avg_time gauge
+rippled_ledgerData_avg_time 7
+# HELP rippled advanceLedger per second.
+# TYPE rippled_advanceLedger_per_second gauge
+rippled_advanceLedger_per_second 4
+# HELP rippled advanceLedger peak time.
+# TYPE rippled_advanceLedger_peak_time gauge
+rippled_advanceLedger_peak_time 36
+# HELP rippled fetchTxnData per second.
+# TYPE rippled_fetchTxnData_per_second gauge
+rippled_fetchTxnData_per_second 17
+# HELP rippled trustedValidation per second.
+# TYPE rippled_trustedValidation_per_second gauge
+rippled_trustedValidation_per_second 7
+# HELP rippled writeObjects per second.
+# TYPE rippled_writeObjects_per_second gauge
+rippled_writeObjects_per_second 14
+# HELP rippled writeObjects peak time.
+# TYPE rippled_writeObjects_peak_time gauge
+rippled_writeObjects_peak_time 14
+# HELP rippled trustedProposal per second.
+# TYPE rippled_trustedProposal_per_second gauge
+rippled_trustedProposal_per_second 14
+# HELP rippled peerCommand per second.
+# TYPE rippled_peerCommand_per_second gauge
+rippled_peerCommand_per_second 756
+# HELP rippled peerCommand peak time.
+# TYPE rippled_peerCommand_peak_time gauge
+rippled_peerCommand_peak_time 1
+# HELP rippled processTransaction per second.
+# TYPE rippled_processTransaction_per_second gauge
+rippled_processTransaction_per_second 25
+# HELP rippled SyncReadNode per second.
+# TYPE rippled_SyncReadNode_per_second gauge
+rippled_SyncReadNode_per_second 22
+# HELP rippled SyncReadNode peak time.
+# TYPE rippled_SyncReadNode_peak_time gauge
+rippled_SyncReadNode_peak_time 135
+# HELP rippled AsyncReadNode per second.
+# TYPE rippled_AsyncReadNode_per_second gauge
+rippled_AsyncReadNode_per_second 1209
+# HELP rippled WriteNode per second.
+# TYPE rippled_WriteNode_per_second gauge
+rippled_WriteNode_per_second 630
+# HELP The time it took for the network to reach consensus on the last ledger close.
+# TYPE rippled_last_close_converge_times gauge
+rippled_last_close_converge_times 2
+# HELP The number of validators that participated in the consensus process during the last ledger close.
+# TYPE rippled_last_close_proposers gauge
+rippled_last_close_proposers 35
+# HELP rippled process threads.
+# TYPE rippled_load_threads gauge
+rippled_load_threads 10
+# HELP rippled service uptime.
+# TYPE rippled_service_uptime counter
+rippled_service_uptime 332706
+# HELP rippled number of times your rippled server has disconnected from peers in the Ripple network.
+# TYPE rippled_peer_disconnects counter
+rippled_peer_disconnects 107
+# HELP rippled load_factor load_factor = 1 (base), >1 higher-than-normal traffic or congestion, <1 rare low load.
+# TYPE rippled_load_factor gauge
+rippled_load_factor 1

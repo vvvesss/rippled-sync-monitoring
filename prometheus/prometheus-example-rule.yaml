@@ -1,0 +1,12 @@
+groups:
+- name: rippled
+  rules:
+  - alert: Rippled LargeSyncDistance
+    expr: node_timestamp - rippled_ledger_index_time > 1800
+    for: 10m
+    labels:
+      severity: warning
+      type: blockchain
+    annotations:
+      summary: Rippled last synced more then one hour ago (instance {{ $labels.instance }})
+      description: "Rippled sync distance is VALUE = {{ $value }}\n  LABELS = {{ $labels }}"

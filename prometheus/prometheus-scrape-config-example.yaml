@@ -1,0 +1,77 @@
+
+#You will need this variables for the dashboard to work properly
+#job label_values(node_timestamp, job)   
+#project label_values(node_timestamp{job="$job", project=~"xrp-mainnet|xrp-testnet"}, project)   
+#node label_values(node_timestamp{job="$job", project="$project"}, name)
+
+#GCP GCE Automatic Scrape Config Example
+- job_name: 'rippled'
+  gce_sd_configs:
+    - project: "your-project-name"
+      zone: "your-gcp-zone"
+      #example filters matching your rippled instances
+      filter: '(status="RUNNING") AND (labels.type="rippled")'
+      refresh_interval: "60s" 
+      port: 9110
+  relabel_configs:
+    - source_labels: [__meta_gce_label_cloud_provider]
+      target_label: cloud_provider
+    - source_labels: [__meta_gce_label_cloud_zone]
+      target_label: cloud_zone
+    - source_labels: [__meta_gce_label_cloud_tier]
+      target_label: cloud_tier
+    - source_labels: [__meta_gce_label_cloud_service]
+      target_label: cloud_service
+    - source_labels: [__meta_gce_instance_name]
+      target_label: instance
+    - source_labels: [__meta_gce_label_project]
+      target_label: project
+    - source_labels: [__meta_gce_label_name]
+      target_label: name
+    - source_labels: [__meta_gce_label_type]
+      target_label: type
+
+
+# AWS EC2 Automatic Scrape Config Example
+- job_name: 'rippled'
+  ec2_sd_configs:
+    - region: "your-aws-region"  # Replace with your AWS region
+      access_key: "your-access-key"  # Optional if you are using IAM roles
+      secret_key: "your-secret-key"  # Optional if you are using IAM roles
+      filters:
+        - name: "tag:Type"
+          values:
+            - "rippled"
+        - name: "instance-state-name"
+          values:
+            - "running"
+      port: 9110
+      refresh_interval: "60s"
+  relabel_configs:
+    - source_labels: [__meta_ec2_tag_Type]
+      target_label: type
+    - source_labels: [__meta_ec2_tag_Project]
+      target_label: project
+    - source_labels: [__meta_ec2_tag_Name]
+      target_label: name
+    - source_labels: [__meta_ec2_instance_id]
+      target_label: instance
+    - source_labels: [__meta_ec2_region]
+      target_label: cloud_region
+    - source_labels: [__meta_ec2_availability_zone]
+      target_label: cloud_zone
+    - source_labels: [__meta_ec2_instance_type]
+      target_label: instance_type
+
+
+#Static scrape config
+- job_name: 'rippled'
+  static_configs:
+  - targets: ['rippled.domain.or.ip:9110']
+    labels:
+      node_name: 'rippled1'
+      job: 'rippled'
+      project: 'some_project'
+      name: 'rippled'
+      type: 'blockchain'
+
