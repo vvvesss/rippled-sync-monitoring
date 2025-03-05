@@ -148,7 +148,7 @@ This rule checks if the difference between the `node_timestamp` and `rippled_led
 
 
 ### Dashboard Demo:
-![Dashboard Demo](https://drive.google.com/file/d/1SS4qn8eAzG8i0uUP_1IlMXN-nKK7GjFn/view?usp=sharing)
+![Dashboard Demo](https://drive.google.com/uc?id=1SS4qn8eAzG8i0uUP_1IlMXN-nKK7GjFn)
 
 ### Sample Graphs:
 - **Rippled Load**: Displays the load on the node.
