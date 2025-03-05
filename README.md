@@ -145,7 +145,10 @@ This rule checks if the difference between the `node_timestamp` and `rippled_led
 ### Dashboard Installation:
 1. Import the **Grafana Dashboard** JSON from the provided file `rippled-dashboard.json`.
 2. The dashboard folder includes various graphs and panels to monitor the health and performance of the `rippled` node.
-3. The dashboard folder also includes a demo PNG (`rippled-dashboard.png`) to show how the dashboard will look once set up.
+
+
+### Dashboard Demo:
+![Dashboard Demo](https://drive.google.com/file/d/1SS4qn8eAzG8i0uUP_1IlMXN-nKK7GjFn/view?usp=sharing)
 
 ### Sample Graphs:
 - **Rippled Load**: Displays the load on the node.
