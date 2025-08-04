@@ -1,8 +1,8 @@
 {
   "__inputs": [
     {
-      "name": "DS_PROMETHEUS-GCE",
-      "label": "Prometheus-GCE",
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus",
       "description": "",
       "type": "datasource",
       "pluginId": "prometheus",
@@ -69,7 +69,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Rippled Load Factor and Threads\n",
       "fieldConfig": {
@@ -147,7 +147,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_load_factor{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -159,7 +159,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_load_threads{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -175,7 +175,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -277,7 +277,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": true,
@@ -290,7 +290,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_peer_disconnects{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -306,7 +306,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Service Data",
       "fieldConfig": {
@@ -384,7 +384,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_last_close_converge_times{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -396,7 +396,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_last_close_proposers{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -408,7 +408,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_clientrpc_in_progress{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -424,7 +424,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Rippled last synced block was this seconds old",
       "fieldConfig": {
@@ -503,7 +503,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": true,
           "expr": "node_timestamp{name=\"$node\", project=\"$project\", job=\"$job\"} - rippled_ledger_index_time{name=\"$node\", project=\"$project\", job=\"$job\"}",
@@ -518,7 +518,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Rippled Job Timers per second",
       "fieldConfig": {
@@ -596,7 +596,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "exemplar": true,
@@ -609,7 +609,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "exemplar": false,
@@ -623,7 +623,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_transaction_per_second{name=\"$node\", job=\"$job\", project=\"$project\"}",
@@ -635,7 +635,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_batch_per_second{name=\"$node\", project=\"$project\", job=\"$job\"}",
@@ -647,7 +647,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_ledgerdata_per_second{job=\"$job\", name=\"$node\", project=\"$project\"}",
@@ -659,7 +659,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_ledgerdata_avg_time{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -671,7 +671,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_advanceledger_per_second{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -683,7 +683,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_fetchtxndata_per_second{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -695,7 +695,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_trustedvalidation_per_second{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -707,7 +707,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_trustedproposal_per_second{job=\"$job\", project=\"$project\", name=\"$node\"}",
@@ -723,7 +723,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Rippled Service Uptime",
       "fieldConfig": {
@@ -772,7 +772,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
           "expr": "rippled_service_uptime{project=\"$project\", name=\"$node\", job=\"$job\"}",
@@ -789,7 +789,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Rippled Last Synced Block Table",
       "fieldConfig": {
@@ -838,7 +838,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": true,
           "expr": "rippled_ledger_index_time{name=\"$node\", project=\"$project\", job=\"$job\"} * 1000",
@@ -853,7 +853,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Rippled Last Synced Block Table",
       "fieldConfig": {
@@ -902,7 +902,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": true,
           "expr": "rippled_ledger_index{name=\"$node\", project=\"$project\", job=\"$job\"}",
@@ -913,7 +913,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": true,
           "expr": "rippled_catching_up{name=\"$node\", project=\"$project\", job=\"$job\"}",
@@ -929,7 +929,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "${DS_PROMETHEUS-GCE}"
+        "uid": "${DS_PROMETHEUS}"
       },
       "description": "Rippled catching up history where \n0 = fully synced\n1 = catching up",
       "fieldConfig": {
@@ -1032,7 +1032,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "${DS_PROMETHEUS-GCE}"
+            "uid": "${DS_PROMETHEUS}"
           },
           "exemplar": true,
           "expr": "rippled_catching_up{name=\"$node\", job=\"$job\", project=\"$project\"}",
@@ -1054,7 +1054,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "${DS_PROMETHEUS-GCE}"
+          "uid": "${DS_PROMETHEUS}"
         },
         "definition": "label_values(node_timestamp, job)",
         "hide": 0,
@@ -1077,7 +1077,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "${DS_PROMETHEUS-GCE}"
+          "uid": "${DS_PROMETHEUS}"
         },
         "definition": "label_values(node_timestamp{job=\"$job\", project=~\"xrp-mainnet|xrp-testnet\"}, project)",
         "hide": 0,
@@ -1100,7 +1100,7 @@
         "current": {},
         "datasource": {
           "type": "prometheus",
-          "uid": "${DS_PROMETHEUS-GCE}"
+          "uid": "${DS_PROMETHEUS}"
         },
         "definition": "label_values(node_timestamp{job=\"$job\", project=\"$project\"}, name)",
         "hide": 0,
